@@ -3,13 +3,12 @@ pytube
 requests
 python-dotenv
 librosa
-openai
 soundfile
-youtube_dl
-yt_dlp
+openai
+yt_dlp  # safer choice over youtube_dl
 pandas
 langchain
-langchain-community
 langchain-core
 langchain-groq
+langchain-community
 st-clickable-images

@@ -13,14 +13,13 @@ from youtube_dl.utils import DownloadError
 import yt_dlp as youtube_dl
 import pickle
 from langchain_community.embeddings import OllamaEmbeddings
-from langchain.vectorstores.chroma import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import FAISS, Chroma
 from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain_core.prompts import PromptTemplate
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks.manager import get_openai_callback
 from langchain.docstore.document import Document
 from dotenv import load_dotenv
 import base64
