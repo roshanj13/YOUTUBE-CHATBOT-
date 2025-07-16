@@ -5,7 +5,8 @@ python-dotenv
 librosa
 soundfile
 openai
-yt_dlp  # safer choice over youtube_dl
+youtube_dl
+yt_dlp
 pandas
 langchain
 langchain-core
