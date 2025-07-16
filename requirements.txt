@@ -1,0 +1,15 @@
+streamlit
+pytube
+requests
+python-dotenv
+librosa
+openai
+soundfile
+youtube_dl
+yt_dlp
+pandas
+langchain
+langchain-community
+langchain-core
+langchain-groq
+st-clickable-images
