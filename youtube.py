@@ -2,6 +2,7 @@ import streamlit as st
 from pytube import YouTube
 import os
 import requests
+from dotenv import load_dotenv
 from time import sleep
 import shutil
 import librosa
@@ -31,16 +32,28 @@ from langchain_groq import ChatGroq
 from st_clickable_images import clickable_images
 import pandas as pd
 
-llm = ChatGroq(temperature=0, groq_api_key="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", model_name="mixtral-8x7b-32768")
+# Load variables from .env file
+load_dotenv()
 
-OPENAI_API_KEY = "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"
+# Load API keys from environment
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+# Initialize services
 openai.api_key = OPENAI_API_KEY
+
+llm = ChatGroq(
+    temperature=0,
+    groq_api_key=GROQ_API_KEY,
+    model_name="mixtral-8x7b-32768"
+)
 
 upload_endpoint = "https://api.assemblyai.com/v2/upload"
 transcript_endpoint = "https://api.assemblyai.com/v2/transcript"
 
 headers = {
-    "authorization": "dad76cb4fff3484b8db99c586dedb3f2",
+    "authorization": ASSEMBLYAI_API_KEY,
     "content-type": "application/json"
 }
 
