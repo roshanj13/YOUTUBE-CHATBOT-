@@ -34,7 +34,6 @@ ASSEMBLYAI_API_KEY=your_assemblyai_key
 GROQ_API_KEY=your_groq_key
 ```
 
-> ❗ Make sure `.env` is added to `.gitignore` to avoid leaking secrets.
 
 ## 🧠 Tech Stack
 
